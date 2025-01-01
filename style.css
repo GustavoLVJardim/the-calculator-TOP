@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Faz o body ocupar 100% da altura da viewport */
+    margin: 0; /* Remove margens padrão */
+    color: #1d1160;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    justify-content: center;
+    align-items: center;
+    
+    width: 300px;
+    height: 400px;
+    background-color:  #1d1160; /* Cor de fundo para visualização */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.display {
+    display: flex;
+    align-self: stretch; /* Faz o display ocupar toda a largura do container */
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center;
+    
+    width: 280px;
+    height: 100px;
+    background-color: #1d1160; /* Fundo branco para simular tela */
+    padding: 10px;
+    font-size: 24px; /* Tamanho do texto */
+    border-radius: 10px 10px 0 0; /* Cantos superiores arredondados */
+    
+}
+
+.buttons {
+    display: grid; /* Altera para layout de grade */
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas com larguras iguais */
+    gap: 10px; /* Espaçamento entre os botões */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+}
+
+.buttons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: 50px;
+    background-color: #ddd; /* Fundo cinza claro */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Aponta que é clicável */
+    font-size: 18px; /* Tamanho do texto */
+    font-weight: bold;
+    
+}
+
