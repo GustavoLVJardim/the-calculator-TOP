@@ -37,14 +37,14 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     align-self: stretch; 
     justify-content: flex-end;
     align-items: center;
-    color: white;
+    color: #85FFBD;
     width: 230px;
     height: 100px;
     background-color: #1d1160;
     padding: 10px;
     font-size: 24px; 
     border-radius: 10px 10px 0 0;
-    
+    outline: red 1px solid;
 }
 
 .buttons {
