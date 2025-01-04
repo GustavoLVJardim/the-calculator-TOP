@@ -1,49 +1,59 @@
+@font-face {
+    font-family: 'Digital7';
+    src: url('assets/digital-7\ \(mono\ italic\).ttf'), url('assets/digital-7\ \(mono\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Faz o body ocupar 100% da altura da viewport */
-    margin: 0; /* Remove margens padrão */
+    height: 100vh; 
+    margin: 0;
     background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-
+    font-family: "Digital7", sans-serif;
 }
 
 .container {
     display: flex;
-    flex-direction: column; /* Alinha os elementos em uma coluna */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     
-    width: 300px;
+    width: 250px;
     height: 400px;
     background: rgb(131,58,180);
 background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    border-radius: 10px; /* Cantos arredondados */
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 .display {
     display: flex;
-    align-self: stretch; /* Faz o display ocupar toda a largura do container */
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-self: stretch; 
+    justify-content: flex-end;
     align-items: center;
     color: white;
-    width: 280px;
+    width: 230px;
     height: 100px;
-    background-color: #1d1160; /* Fundo branco para simular tela */
+    background-color: #1d1160;
     padding: 10px;
-    font-size: 24px; /* Tamanho do texto */
-    border-radius: 10px 10px 0 0; /* Cantos superiores arredondados */
+    font-size: 24px; 
+    border-radius: 10px 10px 0 0;
     
 }
 
 .buttons {
-    display: grid; /* Altera para layout de grade */
-    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas com larguras iguais */
-    gap: 10px; /* Espaçamento entre os botões */
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; 
     width: 100%;
     padding: 10px;
-    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+    box-sizing: border-box; 
 }
 
 .buttons > div {
@@ -54,10 +64,9 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     width: 100%;
     height: 50px;
     background-color: #fff;
-    ; /* Fundo cinza claro */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Aponta que é clicável */
-    font-size: 18px; /* Tamanho do texto */
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 18px; 
     font-weight: bold;
     
 }
