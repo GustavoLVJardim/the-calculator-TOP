@@ -46,35 +46,33 @@ function operate(num1, num2, operator) {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
-    display.textContent = '0'
+    display.textContent = '0';
     let operatorClicked = false;
-    
+
     numberButtons.forEach(button => {
         button.addEventListener('click', () => {
-            if (display.textContent === '0' || operatorCliked) {
-                display.textContent = '';
-                operatorCliked = false;
+            if (display.textContent === '0' || operatorClicked) {
+                display.textContent = ''; 
+                operatorClicked = false;
             }
             display.textContent += button.textContent;
-            
+
             if (!operatorSign) {
                 firstNum = Number(display.textContent);
-                console.log(`primeiro: ${firstNum}`)
+                console.log(`primeiro: ${firstNum}`);
             } else {
-                secondNum = Number(display.textContent)
-                console.log(`segundo: ${secondNum}`)
+                secondNum = Number(display.textContent);
+                console.log(`segundo: ${secondNum}`);
             }
         });
     });
 
-
     operatorButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (firstNum && !operatorClicked) {
-                operatorSign = button.textContent; // Registra o operador
-                operatorClicked = true; // Sinaliza que o operador foi clicado
+                operatorSign = button.textContent;
+                operatorClicked = true;
                 console.log(`operador: ${operatorSign}`);
             }
         });
@@ -84,16 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (firstNum && operatorSign && secondNum) {
             resultNum = operate(firstNum, secondNum, operatorSign);
             display.textContent = resultNum;
-
-            // Prepara para nova operação
             firstNum = resultNum;
             operatorSign = '';
             secondNum = '';
         }
     });
-
-
-    
 
     clean.addEventListener('click', () => {
         display.textContent = '0';
@@ -101,8 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         operatorSign = '';
         secondNum = '';
         resultNum = '';
-    })
-
-
-    
+        operatorClicked = false;
+    });
 });
