@@ -3,8 +3,8 @@
     src: url('assets/digital-7\ \(mono\ italic\).ttf'), url('assets/digital-7\ \(mono\).ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    
 }
-
 
 
 body {
@@ -16,6 +16,7 @@ body {
     background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     font-family: "Digital7", sans-serif;
+    
 }
 
 .container {
@@ -42,7 +43,7 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%,
     height: 100px;
     background-color: #1d1160;
     padding: 10px;
-    font-size: 24px; 
+    font-size: 42px; 
     border-radius: 10px 10px 0 0;
     outline: red 1px solid;
 }
