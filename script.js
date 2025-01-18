@@ -2,6 +2,8 @@ const display = document.querySelector('.display');
 const numberButtons = document.querySelectorAll('.buttons > .number');
 const operatorButtons = document.querySelectorAll('.buttons > .operators');
 const clean = document.querySelector('#clean');
+const point = document.querySelector('#point');
+const percentage = document.querySelector('#percentage');
 
 const firstNumber = document.querySelector('#first-number');
 const operator = document.querySelector('#operator');
@@ -95,5 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
         secondNum = '';
         resultNum = '';
         operatorClicked = false;
+    });
+
+    point.addEventListener('click', () => {
+        if (!display.textContent.includes('.')) {
+            display.textContent += '.';
+        }
+    });
+
+    percentage.addEventListener('click', () => {
+        if (!operatorSign) {
+            firstNum = firstNum / 100;
+            display.textContent = firstNum;
+        } else {
+            secondNum = secondNum / 100;
+            display.textContent = secondNum;
+        }
     });
 });
